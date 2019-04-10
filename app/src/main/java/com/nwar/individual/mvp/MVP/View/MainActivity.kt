@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity(), MainVP.View{
     override fun onResultLogin(result: Boolean) {
         if(result){
             Toast.makeText(this,"로그인 성공",Toast.LENGTH_SHORT).show()
-            val intent = Intent()
+            val intent = Intent(this,RecyclerViewActivity::class.java)
+            startActivity(intent)
         } else {
             Toast.makeText(this,"로그인 실패. 아이디 패스워드 확인하세요.",Toast.LENGTH_SHORT).show()
         }

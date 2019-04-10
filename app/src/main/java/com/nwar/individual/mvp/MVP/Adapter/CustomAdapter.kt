@@ -12,18 +12,19 @@ import com.nwar.individual.mvp.databinding.ItemBinding
 
 class CustomAdapter (val context : Context, val items : ArrayList<Data>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     lateinit var binding : ItemBinding
-    override fun getItemCount(): Int {
-        return items.size
-    }
+    override fun getItemCount() = items.size
 
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if(p0 is CustomAdapter.ViewHolder){
+            p0.setItem(items.get(p1))
+        }
     }
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecyclerView.ViewHolder {
-        return ViewHolder(ItemBinding.inflate(LayoutInflater.from(p0.context),p0,false))
-    }
-    inner class ViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(view){
-
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int) = ViewHolder(ItemBinding.inflate(LayoutInflater.from(p0.context),p0,false))
+    inner class ViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root){
+        fun setItem(data : Data){
+            binding.tvTitle.text = data.title
+            binding.tvContent.text = data.content
+        }
     }
 }
