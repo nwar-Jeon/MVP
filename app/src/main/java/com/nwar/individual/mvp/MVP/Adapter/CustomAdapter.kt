@@ -26,8 +26,10 @@ class CustomAdapter (val context : Context, val items : ArrayList<Data>) : Recyc
     inner class ViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root), MainVP.ViewOfRecycler{
         val presenter : MainVP.PresenterOfRecycler = RecyclerPresenter(this)
         fun setItem(data : Data){
-            binding.tvTitle.text = data.title
-            binding.tvContent.text = data.content
+            binding.let{
+                it.tvTitle.text = data.title
+                it.tvContent.text = data.content
+            }
 
             binding.tvContent.setOnClickListener {
                 presenter.getTextForSetText()

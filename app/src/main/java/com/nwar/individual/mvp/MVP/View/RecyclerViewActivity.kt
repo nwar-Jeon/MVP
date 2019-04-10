@@ -14,16 +14,31 @@ class RecyclerViewActivity : AppCompatActivity() {
     var items = ArrayList<Data>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        items.add(Data("제목입니다","내용입니다."))
-        items.add(Data("제목입니다","내용입니다."))
-        items.add(Data("제목입니다","내용입니다."))
+        items.apply {
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+            add(Data("제목입니다","내용입니다"))
+        }
 
-        val adapter = CustomAdapter(this,items)
+        val adaper = CustomAdapter(this,items)
         val lm = LinearLayoutManager(this)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_recycler_view)
 
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = lm
-        binding.recyclerView.setHasFixedSize(true)
+        binding.recyclerView.apply{
+            adapter = adaper
+            layoutManager = lm
+            setHasFixedSize(true)
+        }
     }
 }
+//val padding = TypedValue.applyDimension( TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics).toInt()
+//setPadding(padding, 0, padding, 0)
+
+//              TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics).toInt().let { padding -> setPadding(padding, 0, padding, 0)}
