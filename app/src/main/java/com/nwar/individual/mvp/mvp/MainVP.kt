@@ -1,4 +1,4 @@
-package com.nwar.individual.mvp.MVP
+package com.nwar.individual.mvp.mvp
 
 interface MainVP {
     interface View{

@@ -1,7 +1,7 @@
-package com.nwar.individual.mvp.MVP.Presenter
+package com.nwar.individual.mvp.mvp.Presenter
 
-import com.nwar.individual.mvp.MVP.MainVP
-import com.nwar.individual.mvp.MVP.Model.RecyclerViewModel
+import com.nwar.individual.mvp.mvp.MainVP
+import com.nwar.individual.mvp.mvp.Model.RecyclerViewModel
 
 class RecyclerPresenter(val view : MainVP.ViewOfRecycler) : MainVP.PresenterOfRecycler {
     val model = RecyclerViewModel()

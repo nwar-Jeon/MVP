@@ -1,6 +1,4 @@
-package com.nwar.individual.mvp.MVP.Model
-
-import android.util.Log
+package com.nwar.individual.mvp.mvp.Model
 
 class MainModel {
     var arr = ArrayList<AccountModel>()

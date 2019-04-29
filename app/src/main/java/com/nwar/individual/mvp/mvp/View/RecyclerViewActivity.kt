@@ -1,11 +1,11 @@
-package com.nwar.individual.mvp.MVP.View
+package com.nwar.individual.mvp.mvp.View
 
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.nwar.individual.mvp.MVP.Adapter.CustomAdapter
-import com.nwar.individual.mvp.MVP.DataModule.Data
+import com.nwar.individual.mvp.mvp.adapter.CustomAdapter
+import com.nwar.individual.mvp.mvp.DataModule.Data
 import com.nwar.individual.mvp.R
 import com.nwar.individual.mvp.databinding.ActivityRecyclerViewBinding
 

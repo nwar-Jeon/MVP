@@ -1,12 +1,12 @@
-package com.nwar.individual.mvp.MVP.View
+package com.nwar.individual.mvp.mvp.View
 
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.nwar.individual.mvp.MVP.MainVP
-import com.nwar.individual.mvp.MVP.Presenter.MainPresenter
+import com.nwar.individual.mvp.mvp.MainVP
+import com.nwar.individual.mvp.mvp.Presenter.MainPresenter
 import com.nwar.individual.mvp.R
 import com.nwar.individual.mvp.databinding.ActivityMainBinding
 

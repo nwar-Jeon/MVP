@@ -1,7 +1,7 @@
-package com.nwar.individual.mvp.MVP.Presenter
+package com.nwar.individual.mvp.mvp.Presenter
 
-import com.nwar.individual.mvp.MVP.MainVP
-import com.nwar.individual.mvp.MVP.Model.MainModel
+import com.nwar.individual.mvp.mvp.MainVP
+import com.nwar.individual.mvp.mvp.Model.MainModel
 
 class MainPresenter (val mainView : MainVP.View): MainVP.Presenter{
     final val model = MainModel()

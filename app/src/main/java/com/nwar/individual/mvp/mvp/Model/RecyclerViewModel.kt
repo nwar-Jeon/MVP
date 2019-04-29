@@ -1,4 +1,4 @@
-package com.nwar.individual.mvp.MVP.Model
+package com.nwar.individual.mvp.mvp.Model
 
 class RecyclerViewModel {
     final var count = 0

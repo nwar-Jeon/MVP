@@ -1,19 +1,16 @@
-package com.nwar.individual.mvp.MVP.Adapter
+package com.nwar.individual.mvp.mvp.adapter
 
 import android.content.Context
-import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nwar.individual.mvp.MVP.DataModule.Data
-import com.nwar.individual.mvp.MVP.MainVP
-import com.nwar.individual.mvp.MVP.Presenter.RecyclerPresenter
-import com.nwar.individual.mvp.R
+import com.nwar.individual.mvp.mvp.DataModule.Data
+import com.nwar.individual.mvp.mvp.MainVP
+import com.nwar.individual.mvp.mvp.Presenter.RecyclerPresenter
 import com.nwar.individual.mvp.databinding.ItemBinding
 
 class CustomAdapter (val context : Context, val items : ArrayList<Data>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    lateinit var binding : ItemBinding
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
